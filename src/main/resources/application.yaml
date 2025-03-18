@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: x6-notification
+  rabbitmq:
+    addresses: localhost:5672
+    username: guest
+    password: ${RABBITMQ_PWD}
+    virtual-host: x6-host
+app:
+  rabbitmq:
+    queue: notification-service.log-queue
+    exchange: notification-exchange
+server:
+  port: ${APP_PORT:8083}
